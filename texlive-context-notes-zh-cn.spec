@@ -1,3 +1,9 @@
+# revision 23171
+# category Package
+# catalog-ctan /info/context-notes-zh-cn
+# catalog-date 2009-11-09 14:30:19 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-context-notes-zh-cn
 Version:	20091109
 Release:	1
@@ -59,6 +65,7 @@ reference, project structure, metafun and presentation design.
 %doc %{_texmfdistdir}/doc/context/third/context-notes-zh-cn/src/t-zhfonts.lua
 %doc %{_texmfdistdir}/doc/context/third/context-notes-zh-cn/src/t-zhfonts.mkiv
 %doc %{_texmfdistdir}/doc/context/third/context-notes-zh-cn/src/t-zhspuncs.lua
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -69,3 +76,5 @@ reference, project structure, metafun and presentation design.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

@@ -15,11 +15,10 @@ Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-notes-zh-
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-notes-zh-cn.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
-Requires:	texlive-context
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-context
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
-Requires(post):	texlive-context.bin
 
 %description
 An introductory tutorial on ConTeXt, in Chinese. The document

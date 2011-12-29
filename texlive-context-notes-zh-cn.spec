@@ -17,28 +17,18 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-context
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 An introductory tutorial on ConTeXt, in Chinese. The document
 covers ConTeXt installation, fonts, layout design, cross-
 reference, project structure, metafun and presentation design.
 
-%pre
-    %_texmf_mtxrun_pre
-
 %post
-    %_texmf_mtxrun_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -64,7 +54,6 @@ reference, project structure, metafun and presentation design.
 %doc %{_texmfdistdir}/doc/context/third/context-notes-zh-cn/src/t-zhfonts.lua
 %doc %{_texmfdistdir}/doc/context/third/context-notes-zh-cn/src/t-zhfonts.mkiv
 %doc %{_texmfdistdir}/doc/context/third/context-notes-zh-cn/src/t-zhspuncs.lua
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -75,5 +64,3 @@ reference, project structure, metafun and presentation design.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

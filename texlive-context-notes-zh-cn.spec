@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-notes-zh-cn
 Version:	20091109
-Release:	5
+Release:	6
 Summary:	Notes on using ConTeXt MkIV
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/context-notes-zh-cn

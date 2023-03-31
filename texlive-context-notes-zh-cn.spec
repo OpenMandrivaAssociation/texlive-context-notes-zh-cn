@@ -1,6 +1,6 @@
 Name:		texlive-context-notes-zh-cn
 Version:	23171
-Release:	1
+Release:	2
 Summary:	Notes on using ConTeXt MkIV
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/context-notes-zh-cn

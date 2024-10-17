@@ -3,7 +3,7 @@ Version:	23171
 Release:	2
 Summary:	Notes on using ConTeXt MkIV
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/info/context-notes-zh-cn
+URL:		https://www.ctan.org/tex-archive/info/context-notes-zh-cn
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-notes-zh-cn.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-notes-zh-cn.doc.r%{version}.tar.xz
